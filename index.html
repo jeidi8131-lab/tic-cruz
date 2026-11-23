@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexoSoft</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <section id="pantalla-portada" class="portada">
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="contenido/interfaz1.mp4" type="video/mp4">
+        </video>
+
+        <div class="capa-oscura"></div>
+
+        <div class="contenido-portada">
+            <h1 class="titulo-principal">Nexo<span>Soft</span></h1>
+            <p class="subtitulo-portada">Alumna: Jeidi Cruz Remigio</p>
+
+            <div class="caja-descripcion">
+                <h3>¿De qué trata este sitio web?</h3>
+                <p>
+                    Somos un grupo académico diseñado para ahorrarte tiempo y centralizar tus prácticas.
+                    Aquí encontrarás organizados por categorías los simuladores de redes y radio más utilizados,
+                    conectándote con un solo clic a sus guías paso a paso y enlaces oficiales de descarga.
+                </p>
+            </div>
+
+            <button id="btn-ingresar" class="btn-neon">Explorar Catálogo</button>
+        </div>
+    </section>
+
+    <section id="pantalla-categorias" class="seccion-clara oculto">
+        <div class="contenedor">
+            <header class="cabecera-categorias">
+                <h2>Explora por Categoría</h2>
+                <p>Selecciona cualquier texto en azul para abrir su guía de estudio completa.</p>
+            </header>
+
+            <div class="rejilla-tarjetas">
+  
+                <div class="tarjeta">
+                    <div class="borde-superior"></div>
+                    <h3> Simuladores de Red</h3>
+                    <ul class="lista-enlaces">
+                        <li><a href="#" onclick="abrirGuia('gns3'); return false;"><span>▶</span> GNS3</a></li>
+                        <li><a href="#" onclick="abrirGuia('packet'); return false;"><span>▶</span> Cisco Packet Tracer</a></li>
+                        <li><a href="#" onclick="abrirGuia('wireshark'); return false;"><span>▶</span> Wireshark (Sniffer)</a></li>
+                    </ul>
+                </div>
+
+  
+                <div class="tarjeta">
+                    <div class="borde-superior"></div>
+                    <h3> Radio y Señales (SDR)</h3>
+                    <ul class="lista-enlaces">
+                        <li><a href="#" onclick="abrirGuia('gnuradio'); return false;"><span>▶</span> GNU Radio</a></li>
+                        <li><a href="#" onclick="abrirGuia('matlab'); return false;"><span>▶</span> MATLAB / Simulink</a></li>
+                        <li><a href="#" onclick="abrirGuia('sdrsharp'); return false;"><span>▶</span> SDR# (Airspy)</a></li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <div class="borde-superior"></div>
+                    <h3> Enlace de descarga</h3>
+                    <ul class="lista-enlaces">
+                        <li><a href="https://www.gns3.com/" target="_blank" rel="noopener noreferrer"><span>▶</span> GNS3 (Web Oficial)</a></li>
+                        <li><a href="https://www.netacad.com/" target="_blank" rel="noopener noreferrer"><span>▶</span> Cisco Packet Tracer (NetAcad)</a></li>
+                        <li><a href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer"><span>▶</span> Wireshark (Web Oficial)</a></li>
+                        <li><a href="https://www.gnuradio.org/" target="_blank" rel="noopener noreferrer"><span>▶</span> GNU Radio (Web Oficial)</a></li>
+                        <li><a href="https://la.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><span>▶</span> MATLAB (MathWorks)</a></li>
+                        <li><a href="https://airspy.com/download/" target="_blank" rel="noopener noreferrer"><span>▶</span> SDR# / Airspy (Descarga)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie-navegacion">
+                <button id="btn-volver-portada" class="btn-gris">← Volver al inicio</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="pantalla-guia" class="seccion-clara oculto">
+        <div class="contenedor caja-guia">
+            <button id="btn-volver-categorias" class="btn-gris">← Volver a Categorías</button>
+
+            <div id="contenido-dinamico-guia"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
